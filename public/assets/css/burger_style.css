@@ -5,3 +5,17 @@ li {
 
 }
 
+
+h2  {
+    text-align: center;
+}
+
+ img{
+    display: block;
+    margin: auto;
+
+}
+
+body {
+    background: aqua;
+}

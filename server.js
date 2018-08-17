@@ -5,11 +5,11 @@ var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 var exphbs = require("express-handlebars");
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 
 // Look in the public folder
 
-app.use(express.static("/public"));
+app.use(express.static("public"));
 
 // parse application
 

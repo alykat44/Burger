@@ -14,9 +14,9 @@
                 <li>
                     {{this.burger_name}}
 
-                    <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+                    <form action="burgers/update/{{this.id}}" method="POST">
 
-                        <button type="SUBMIT">Devour Burger!!</button>
+                        <button type="submit">Devour Burger!!</button>
                     </form>
                 </li>
                 {{/unless}} {{/each}}
@@ -28,13 +28,19 @@
             <h2 class="text-center">ADD A BURGER</h2>
             <form class="create-update-form" action="burgers/create" method="POST"></form>
 
+            {{!--
             <div class="form-group">
                 <label form="ca">Burger Name: </label>
                 <input type="text" id="ca" name="name">
-            </div>
+            </div> --}}
 
+            <form action="burgers/create" method="POST">
 
-            <button type="SUBMIT">ADD BURGER</button>
+                <div class="form-group">
+                    <label form="ca">Burger Name: </label>
+                    <input type="text" id="ca" name="name">
+                </div>
+                <button type="submit">ADD BURGER</button>
 
             </form>
 
