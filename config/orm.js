@@ -40,11 +40,11 @@ var orm = {
         queryString = queryString + " ( ";
         queryString = queryString + cols.toString();
         queryString = queryString + " ) ";
-        queryString = queryString + "VALUES ( ";
+        queryString = queryString + "VALUES ( " ;
 
         console.log(vals);
         queryString = queryString + printQuestionMarks(vals.length);
-        queryString = queryString + " ) ";
+        queryString = queryString + " ) " ;
         console.log(queryString);
         connection.query(queryString, vals, function (err, result) {
             if (err) throw err;
@@ -63,17 +63,16 @@ var orm = {
         queryString = queryString + "WHERE";
         queryString = queryString + condition;
 
-        /* console.log(queryString); */
+        console.log(queryString);
+
+
         connection.query(queryString, function (err, result) {
             if (err) throw err;
             cb(result);
         });
-
     }
-
-
-
 };
+
 
 module.exports = orm;
 
