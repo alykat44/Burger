@@ -14,8 +14,8 @@ h2  {
     display: block;
     margin: auto;
 
-}
+ }
 
-body {
+.container {
     background:rgb(65, 173, 128);
 }
