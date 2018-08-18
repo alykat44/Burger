@@ -72,12 +72,32 @@ router.post("/burgers/create", function (req, res) {
   });
 });
 */
-router.post('/:id', function (req, res) {
-  var condition = 'id = ' + req.params.id;
-  burger.updateOne({
-    devoured: true
-  }, condition, function (data) {
-    res.redirect('/');
+// router.post('/:id', function (req, res) {
+//   var condition = 'id = ' + req.params.id;
+//   burger.updateOne({
+//     devoured: true
+//   }, condition, function (data) {
+//     res.redirect('/');
+//   });
+// });
+
+router.put("/:id", function(req, res) {
+  var condition = "id = " + req.params.id;
+
+  console.log("condition", condition);
+
+  burger.update({
+    devoured: req.body.devoured
+  }, condition, function() {
+    res.redirect("/");
+  });
+});
+
+router.delete("/:id", function(req, res) {
+  var condition = "id = " + req.params.id;
+
+  burger.delete(condition, function() {
+    res.redirect("/");
   });
 });
 

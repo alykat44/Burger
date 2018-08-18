@@ -4,7 +4,7 @@
 
     <br>
 
-    <img id="burgerPic" src="https://i.imgur.com/meCuTz1.jpg" style="height:250px; width:450px;">
+    <img id="burgerPic" src="https://i.imgur.com/meCuTz1.jpg" style="height:300px; width:450px;">
 
 </div>
 <br>
@@ -20,8 +20,8 @@
                     
                     {{this.burger_name}}
 
-                    <form action="burgers/update/{{this.id}}" method="POST">
-                        
+                    <form action="/burgers/update/{{this.id}}" method="POST">
+                        <input type="hidden" name="devoured" value="true">
                         <button class="btn-primary" type="submit">Devour Burger!!</button>
                     </form>
                 </li>
@@ -64,10 +64,7 @@
                 </li>
                 {{/if}} {{/each}}
 
-
-
-
-            </ul>
+             </ul>
         </div>
     </div>
 
