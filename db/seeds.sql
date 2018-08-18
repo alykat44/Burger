@@ -6,3 +6,6 @@ VALUES ("Jalepeno Burger", false, now());
 
 INSERT INTO burgers (burger_name, devoured, date)
 VALUES ("Kitchen Sink Burger", true, now()); 
+
+INSERT INTO burgers (burger_name, devoured, date)
+VALUES ("Bluecheese Burger", true, now()); 

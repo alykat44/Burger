@@ -56,11 +56,11 @@ var orm = {
     // updating columns with new info
 
     updateOne: function (table, objColVals, condition, cb) {
-        var queryString = "UPDATE" + table;
+        var queryString = "UPDATE " + table;
 
-        queryString = queryString + "SET";
+        queryString = queryString + " SET ";
         queryString = queryString + objToSql(objColVals);
-        queryString = queryString + "WHERE";
+        queryString = queryString + " WHERE ";
         queryString = queryString + condition;
 
         console.log(queryString);
