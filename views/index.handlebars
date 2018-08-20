@@ -32,13 +32,7 @@
 
         <div class="col-xs-12 col-md-4">
             <h2 class="text-center">ADD A BURGER</h2>
-            {{!-- <form  action="burgers/create" method="POST"></form> --}}
-
-            {{!--
-            <div class="form-group">
-                <label form="ca">Burger Name: </label>
-                <input type="text" id="ca" name="name">
-            </div> --}}
+            
 
             <form class="create-update-form" action="burgers/create" method="POST">
 
@@ -47,6 +41,7 @@
                     <input type="text" id="ca" name="name">
                 </div>
                 <button class="btn-primary" type="submit">ADD BURGER</button>
+                
 
             </form>
 
@@ -54,19 +49,14 @@
         <div class="col-xs-12 col-md-4">
 
             <h2 class="text-center">Devoured Burgers!!!</h2>
-           {{!--  <form class="create-update-form" action="/{{this.id}}?" method="POST">
-                <input type="hidden" name="devoured" value="true">
-                <button class="btn-primary" type="submit">Devour Burger!!</button>
- --}}
+           
                 <ul>
 
                     {{#each burgers}} {{#if this.devoured}}
 
                     <li>
                         {{this.burger_name}}
-                        {{!-- <form class="create-update-form" action="/{{this.id}}?" method="POST">
-                            <input type="hidden" name="devoured" value="true">
-                            <button class="btn-primary" type="submit">Devour Burger!!</button> --}}
+                        
 
 
 
@@ -74,6 +64,8 @@
                     {{/if}} {{/each}}
 
                 </ul>
+
+                
         </div>
     </div>
 
